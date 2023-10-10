@@ -1,0 +1,14 @@
+services:
+  service-1:
+    build: 
+      context:  ../
+      dockerfile: ./.docker/dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ../:/app
+      - /app/node_modules
+      - /app/.next
+    #environment:
+    #  ENV_VARIABLE: ${ENV_VARIABLE}
+    # NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}
